@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <style>
+        html{
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-image: url('https://miro.medium.com/max/6706/0*0QzcpDwvlRUlwdz0');
+            background-size: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        h1{
+            font-size: 40px;
+        }
+
+
+        .content {
+            max-width: 1050px;
+            margin: auto;
+            background: white;
+            padding: 10px;
+            opacity: 0.9;
+        }
+
+
+        .title{
+             font-size: 25px;
+        }
+
+
+        textarea{
+             font-size: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class = "content" >
+    <h1 style="text-align:center">Spam Detection System</h1>
+    <br>
+    <h2>Model Building First before detect message</h2>
+    <a href=modelbuilding ><button class=grey >Model Building</button></a>
+    <ul>
+        <li>Accuracy: {{acc}} %</li>
+        <li>{{status}}</li>
+    </ul>
+    <form id = "contentform" action="{{url_for('predict')}}" method="POST">
+        <label class = "title" for="message">Content of Message:</label>
+        <br>
+        <textarea id="message" name="message" rows="7" cols="85" required placeholder="text here.(english only)"></textarea>
+        <br>
+        <button id = "detectBtn" type="submit">Detect !</button>
+        <p align="right">Accept content of message in english only.</p>
+    </form>
+</div>
+</body>
+</html>

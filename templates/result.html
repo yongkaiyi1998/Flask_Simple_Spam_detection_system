@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Result</title>
+    <style>
+        body {
+            background-image: url('https://miro.medium.com/max/6706/0*0QzcpDwvlRUlwdz0');
+            background-size: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        h1{
+            font-size: 40px;
+        }
+
+
+        .content {
+            max-width: 1050px;
+            margin: auto;
+            background: white;
+            padding: 10px;
+            opacity: 0.9;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class = "content">
+        {% if predict == [1] %}
+	        <h1 style="text-align:center"><b>It is a Spam!</b></h1>
+	    {% else %}
+            <h1 style="text-align:center"><b>It`s not a Spam</b></h1>
+	    {% endif %}
+    <p align="center"><a href=home ><button class=grey>Back</button></a></p>
+</div>
+</body>
+</html>
